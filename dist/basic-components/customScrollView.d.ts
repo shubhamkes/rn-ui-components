@@ -14,5 +14,5 @@ declare type ScrollProp = {
  * Custom ScrollView component; to be used in place of ScrollView  component. It takes care of absolute values
  * assigned to it and converts them into relative size according to the screen size of the device
  */
-declare const CustomScrollView: React.ForwardRefExoticComponent<Pick<ScrollProp, string | number> & React.RefAttributes<unknown>>;
+declare const CustomScrollView: React.ForwardRefExoticComponent<Pick<ScrollProp, React.ReactText> & React.RefAttributes<unknown>>;
 export { CustomScrollView as ScrollView };

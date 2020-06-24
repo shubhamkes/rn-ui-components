@@ -15,5 +15,5 @@ declare type ViewProps = {
  * Custom View component; to be used in place of View component. It takes care of absolute values
  * assigned to it and converts them into relative size according to the screen size of the device
  */
-declare const CustomView: React.ForwardRefExoticComponent<Pick<ViewProps, string | number> & React.RefAttributes<unknown>>;
+declare const CustomView: React.ForwardRefExoticComponent<Pick<ViewProps, React.ReactText> & React.RefAttributes<unknown>>;
 export { CustomView as View };

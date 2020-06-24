@@ -13,16 +13,19 @@
     "license": "MIT",
     "peerDependencies": {
         "react": "*",
-        "react-native": "*"
+        "react-native": "*",
+        "rn-themed-tailwind": "*"
     },
     "dependencies": {
-        "@types/node": "^14.0.13"
+        "@types/node": "^14.0.13",
+        "prop-types": "^15.7.2"
     },
     "devDependencies": {
         "@types/react": "^16.9.38",
         "react": "^16.13.1",
         "react-native": "^0.62.2",
         "tslint": "^6.1.2",
+        "rn-themed-tailwind": "../rn-themed-tailwind",
         "typescript": "^3.9.5"
     }
 }

@@ -4,5 +4,5 @@ declare type FlatListProps = {
     onPress?: () => void;
     [key: string]: any;
 };
-declare const CustomFlatList: React.ForwardRefExoticComponent<Pick<FlatListProps, string | number> & React.RefAttributes<unknown>>;
+declare const CustomFlatList: React.ForwardRefExoticComponent<Pick<FlatListProps, React.ReactText> & React.RefAttributes<unknown>>;
 export { CustomFlatList as FlatList };

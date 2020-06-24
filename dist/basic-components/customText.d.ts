@@ -14,5 +14,5 @@ declare type TextProps = {
  * Custom Text component; to be used in place of Text component. It takes care of absolute values
  * assigned to it and converts them into relative size according to the screen size of the device
  */
-declare const CustomText: React.ForwardRefExoticComponent<Pick<TextProps, string | number> & React.RefAttributes<unknown>>;
+declare const CustomText: React.ForwardRefExoticComponent<Pick<TextProps, React.ReactText> & React.RefAttributes<unknown>>;
 export { CustomText as Text };

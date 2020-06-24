@@ -15,5 +15,5 @@ declare type TouchableProps = {
  * Custom Touchable Opacity component; to be used in place of TouchableOpacity component. It takes care of absolute values
  * assigned to it and converts them into relative size according to the screen size of the device
  */
-declare const CustomTouchableOpacity: React.ForwardRefExoticComponent<Pick<TouchableProps, string | number> & React.RefAttributes<unknown>>;
+declare const CustomTouchableOpacity: React.ForwardRefExoticComponent<Pick<TouchableProps, React.ReactText> & React.RefAttributes<unknown>>;
 export { CustomTouchableOpacity as TouchableOpacity };

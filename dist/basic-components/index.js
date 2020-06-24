@@ -1,6 +1,6 @@
 export * from './customView';
 export * from './customTouchableOpacity';
-export * from './customButton';
+// export * from './customButton';
 // export * from './customImage';
 // export * from './customImageBackground';
 export * from './customText';
