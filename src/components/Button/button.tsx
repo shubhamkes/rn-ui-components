@@ -10,7 +10,7 @@ import { ViewPropTypes } from '../../utils/viewPropTypes';
 
 // import Icon from '../Icon'; // @TODO icon fix
 
-import RippleFeedback from './../Ripple-Feedback/rippleFeedback.android';
+import RippleFeedback from './../Ripple-Feedback/rippleFeedback';
 /* eslint-disable import/no-unresolved, import/extensions */
 import getPlatformElevation from '../../utils/getPlatformElevation';
 import getTheme from '../../styles/getTheme';
@@ -115,7 +115,7 @@ function GetStyles({ primary, accent, disabled, raised, elevation, style = {}, g
         } else if (accent && raised) {
             local.container.backgroundColor = '#f24434';
             // local.container.backgroundColor = getColor('secondaryColor-100')
-            local.text.color = '#fff';
+            local.text = { color: '#fff' };
         }
     }
 
@@ -163,7 +163,6 @@ export const Button = ({ text, onPress, icon, iconSet, disabled, raised, upperCa
     const { getStyle, getColor } = useContext(ThemeContext);
 
     const styles = GetStyles({ elevation, primary, accent, disabled, raised, style, getStyle, getColor });
-    console.log('styles', styles);
     // const styles = getStyles(this.props, this.state);
 
     function onPressButton() {

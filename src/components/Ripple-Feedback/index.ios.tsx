@@ -1,3 +1,3 @@
-import RippleFeedback from './rippleFeedback.ios';
+import RippleFeedback from './rippleFeedback';
 
 export { RippleFeedback };

@@ -87,6 +87,20 @@ export default function getTheme(getStyle) {
                 // },
             }
         ),
+
+        card: StyleSheet.create(
+            {
+                container: {
+                    ...getStyle('bg-whiteColor rounded-md'),
+                    // backgroundColor: palette.canvasColor,
+                    borderRadius: 2,
+                    marginVertical: 4,
+                    marginHorizontal: 8,
+                    overflow: 'hidden',
+                    ...(getPlatformElevation as Function)(2),
+                },
+            },
+        )
         // ...baseTheme,
     };
 

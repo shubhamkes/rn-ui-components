@@ -9,9 +9,9 @@ import {
     StyleSheet,
 } from 'react-native';
 /* eslint-enable import/no-unresolved, import/extensions */
-import { ViewPropTypes } from './../../utils/viewPropTypes';
+import { ViewPropTypes } from '../../utils/viewPropTypes';
 // import Color from 'color';
-// import { black } from '../styles/colors';
+// import { black } from './../../styles/colors';
 import { ELEVATION_ZINDEX } from '../../constants';
 
 const propTypes = {
@@ -64,6 +64,7 @@ interface RippleFeedbackProps {
     onPressIn?: Function;
     onPressOut?: Function;
     style: any;
+    delayPressIn?: any; // @todo to be used in future
 }
 
 interface RippleFeedbackState {
