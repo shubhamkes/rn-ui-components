@@ -7,7 +7,7 @@
     "scripts": {
         "lint": "tslint --project tsconfig.json",
         "build": "rm -rf dist && tsc",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "jest"
     },
     "author": "Shubham Kesarwani <shubham.kesarwani89@gmail.com>",
     "license": "MIT",
@@ -21,11 +21,19 @@
         "prop-types": "^15.7.2"
     },
     "devDependencies": {
+        "@babel/core": "^7.10.3",
         "@types/react": "^16.9.38",
+        "babel-jest": "^26.1.0",
+        "jest": "^26.1.0",
+        "metro-react-native-babel-preset": "^0.59.0",
         "react": "^16.13.1",
         "react-native": "^0.62.2",
-        "tslint": "^6.1.2",
+        "react-test-renderer": "^16.13.1",
         "rn-themed-tailwind": "../rn-themed-tailwind",
+        "tslint": "^6.1.2",
         "typescript": "^3.9.5"
+    },
+    "jest": {
+        "preset": "react-native"
     }
 }
