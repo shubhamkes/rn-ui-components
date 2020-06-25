@@ -157,7 +157,7 @@ function GetStyles({ primary, accent, disabled, raised, elevation, style = {}, g
 }
 
 
-export const Button = ({ text, onPress, icon, iconSet, disabled, raised, upperCase, onLongPress = () => { }, testID, primary, accent, style }) => {
+const Button = ({ text, onPress, icon, iconSet, disabled, raised, upperCase, onLongPress = () => { }, testID, primary, accent, style }) => {
     const [elevation, setElevation] = useState(2);
 
     const { getStyle, getColor } = useContext(ThemeContext);
@@ -236,4 +236,6 @@ export const Button = ({ text, onPress, icon, iconSet, disabled, raised, upperCa
     );
 
 }
+
+export default Button;
 
