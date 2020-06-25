@@ -103,7 +103,8 @@ function GetStyles({ primary, accent, disabled, raised, elevation, style = {}, g
             local.text = getStyle('text-primaryColor-100');
             // local.text = { color: palette.primaryColor };
         } else if (accent && !raised) {
-            local.text = getStyle('text-secondaryColor-100');
+            local.text = { color: '#f24434' };
+            // local.text = getStyle('text-secondaryColor-100');
             // local.text = { color: palette.accentColor };
         }
 
@@ -112,8 +113,9 @@ function GetStyles({ primary, accent, disabled, raised, elevation, style = {}, g
             // palette.primaryColor;
             local.text = getStyle('text-onPrimaryColor');
         } else if (accent && raised) {
-            local.container.backgroundColor = getColor('secondaryColor-100')
-            local.text = getStyle('text-onSecondaryColor');
+            local.container.backgroundColor = '#f24434';
+            // local.container.backgroundColor = getColor('secondaryColor-100')
+            local.text.color = '#fff';
         }
     }
 

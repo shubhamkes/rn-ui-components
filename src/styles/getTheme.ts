@@ -57,7 +57,7 @@ export default function getTheme(getStyle) {
                 },
             }
         ),
-        buttonFlat: StyleSheet.create({}),
+        buttonFlat: StyleSheet.create({ container: { borderColor: "#20232a" } }),
         buttonDisabled: StyleSheet.create(
             {
                 text: getStyle('text-disabledColor')
@@ -69,9 +69,9 @@ export default function getTheme(getStyle) {
         buttonRaised: StyleSheet.create(
             {
                 container: {
-                    ...getStyle('bg-primaryColor-100 border-primary'),
-                    // backgroundColor: '#fff',
-                    // borderColor: 'rgba(0,0,0,.12)',
+                    // ...getStyle('bg-primaryColor-100 border-primary'),
+                    backgroundColor: '#fff',
+                    borderColor: 'rgba(0,0,0,.12)',
                 },
             }
         ),
