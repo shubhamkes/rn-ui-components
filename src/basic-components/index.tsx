@@ -1,7 +1,7 @@
 export * from './customView';
 export * from './customTouchableOpacity';
 // export * from './customButton';
-// export * from './customImage';
+export * from './customImage';
 // export * from './customImageBackground';
 export * from './customText';
 // export * from './customTextInput';

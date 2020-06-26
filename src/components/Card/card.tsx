@@ -43,9 +43,9 @@ export const Card = ({ onPress, ...props }) => {
     const { getStyle, getColor } = useContext(ThemeContext);
     const [styles, setStyles] = useState(GetStyles({ getStyle, getColor, ...props }));
 
-    useEffect(() => {
-        setStyles(GetStyles({ getStyle, getColor, ...props }));
-    }, [props]);
+    // useEffect(() => {
+    //     setStyles(GetStyles({ getStyle, getColor, ...props }));
+    // }, [props]);
 
     function renderContent() {
         const { children } = props;
