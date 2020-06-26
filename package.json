@@ -8,14 +8,14 @@
         "lint": "tslint --project tsconfig.json",
         "build": "rm -rf dist && tsc",
         "test": "echo \"Error: no test specified\" && exit 1",
-        "postinstall": "yarn run build"
+        "prepare": "install-peers"
     },
     "author": "Shubham Kesarwani <shubham.kesarwani89@gmail.com>",
     "license": "MIT",
     "peerDependencies": {
-        "react": "*",
-        "react-native": "*",
-        "rn-themed-tailwind": "*"
+        "react": ">=16.13.1",
+        "react-native": ">=0.62.2",
+        "rn-themed-tailwind": "../rn-themed-tailwind"
     },
     "dependencies": {
         "@types/node": "^14.0.13",
@@ -24,9 +24,7 @@
     },
     "devDependencies": {
         "@types/react": "^16.9.38",
-        "react": "^16.13.1",
-        "react-native": "^0.62.2",
-        "rn-themed-tailwind": "../rn-themed-tailwind",
+        "install-peers-cli": "^2.2.0",
         "tslint": "^6.1.2",
         "typescript": "^3.9.5"
     }
