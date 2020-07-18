@@ -21,7 +21,8 @@
     "dependencies": {
         "@types/node": "^14.0.13",
         "color": "^3.1.2",
-        "prop-types": "^15.7.2"
+        "prop-types": "^15.7.2",
+        "react-native-scrollable-tab-view": "^1.0.0"
     },
     "devDependencies": {
         "@types/react": "^16.9.38",
