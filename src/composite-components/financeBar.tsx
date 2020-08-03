@@ -65,4 +65,4 @@ const styles = StyleSheet.create({
     center: GetStyle('items-center  justify-center')
 })
 
-export default FinanceBar;
+export { FinanceBar };
