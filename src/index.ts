@@ -1,6 +1,6 @@
 export * from "./basic-components";
 
-export * from "./components/Ripple-Feedback";
+export * as RippleFeedback from "./components/Ripple-Feedback";
 
 export { Button } from "./components/Button/button";
 
