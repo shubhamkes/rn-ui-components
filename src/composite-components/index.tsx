@@ -1,1 +1,1 @@
-export * from './financeBar';
+export * as FinanceBar from './financeBar';
