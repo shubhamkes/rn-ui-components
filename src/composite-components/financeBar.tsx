@@ -10,6 +10,30 @@ import { StyleSheet, Image } from 'react-native'; //@todo image will get from rn
 import { ThemeContext, GetStyle } from 'rn-themed-tailwind';
 import { View, Text, TouchableOpacity } from '../index';
 
+
+/**
+ *  Example:= 
+ * const props = [
+    {
+        heading: Accounts,
+        data: '12,.00',
+        callback: (e) => {
+            console.warn('fadsfdsdsf', e);
+        },
+    },
+    {
+        heading: 'You get back',
+        data: '12,897.00',
+        callback: (e) => {
+            console.warn('fadsfdsdsf', e);
+        },
+    },
+    {
+        heading: 'You get back',
+        data: '12,897.00',
+    },
+];
+ */
 const FinanceBar = ({ props }) => {
 
     const { getStyle } = useContext(ThemeContext);
@@ -59,7 +83,7 @@ const FinanceBar = ({ props }) => {
 };
 
 const styles = StyleSheet.create({
-    container: GetStyle('flex-1  p-4'),
+    container: GetStyle('p-4'),
     wrapper: GetStyle('flex-row justify-around p-4'),
     border: GetStyle('border-2 rounded-lg'),
     center: GetStyle('items-center  justify-center')
