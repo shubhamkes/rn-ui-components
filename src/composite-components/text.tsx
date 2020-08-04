@@ -33,12 +33,13 @@ b==600==bold
  */
 
 type getStyleProps = {
-    style?: any,
+    text: string,
     [key: string]: any,
+    style?: any,
     color?: { color?: string }
 }
 
-const TextSmSb = ({ props, color = {}, style = {} }: getStyleProps) => {
+const TextSmSb = ({ props, color = {}, style = {}, text }: getStyleProps) => {
 
     const { getStyle } = useContext(ThemeContext);
 
@@ -46,10 +47,10 @@ const TextSmSb = ({ props, color = {}, style = {} }: getStyleProps) => {
 
     const smSbStyle = { ...STYLE['sm-sb'], ...fontColor, ...style };
 
-    return <Text style={smSbStyle}>Text-sm-sb</Text>;
+    return <Text style={smSbStyle}>{text}</Text>;
 };
 
-const TextBSb = ({ props, color = {}, style = {} }: getStyleProps) => {
+const TextBSb = ({ props, color = {}, style = {}, text }: getStyleProps) => {
 
     const { getStyle } = useContext(ThemeContext);
 
@@ -57,10 +58,10 @@ const TextBSb = ({ props, color = {}, style = {} }: getStyleProps) => {
 
     const smSbStyle = { ...STYLE['b-sb'], ...fontColor, ...style };
 
-    return <Text style={smSbStyle}>Text-sm-sb</Text>;
+    return <Text style={smSbStyle}>{text}</Text>;
 };
 
-const TextBB = ({ props, color = {}, style = {} }: getStyleProps) => {
+const TextBB = ({ props, color = {}, style = {}, text }: getStyleProps) => {
 
     const { getStyle } = useContext(ThemeContext);
 
@@ -68,10 +69,10 @@ const TextBB = ({ props, color = {}, style = {} }: getStyleProps) => {
 
     const bbStyle = { ...STYLE['b-b'], ...fontColor, ...style };
 
-    return <Text style={bbStyle}>Text-base-b</Text>;
+    return <Text style={bbStyle}>{text}</Text>;
 };
 
-const TextBRg = ({ props, color = {}, style = {} }: getStyleProps) => {
+const TextBRg = ({ props, color = {}, style = {}, text }: getStyleProps) => {
 
     const { getStyle } = useContext(ThemeContext);
 
@@ -79,10 +80,10 @@ const TextBRg = ({ props, color = {}, style = {} }: getStyleProps) => {
 
     const bbStyle = { ...STYLE['b-rg'], ...fontColor, ...style };
 
-    return <Text style={bbStyle}>Text-base-b</Text>;
+    return <Text style={bbStyle}>{text}</Text>;
 };
 
-const TextLgRg = ({ props, color = {}, style = {} }: getStyleProps) => {
+const TextLgRg = ({ props, color = {}, style = {}, text }: getStyleProps) => {
 
     const { getStyle } = useContext(ThemeContext);
 
@@ -90,10 +91,10 @@ const TextLgRg = ({ props, color = {}, style = {} }: getStyleProps) => {
 
     const bbStyle = { ...STYLE['lg-rg'], ...fontColor, ...style };
 
-    return <Text style={bbStyle}>Text-base-b</Text>;
+    return <Text style={bbStyle}>{text}</Text>;
 };
 
-const TextLgB = ({ props, color = {}, style = {} }: getStyleProps) => {
+const TextLgB = ({ props, color = {}, style = {}, text }: getStyleProps) => {
 
     const { getStyle } = useContext(ThemeContext);
 
@@ -101,10 +102,10 @@ const TextLgB = ({ props, color = {}, style = {} }: getStyleProps) => {
 
     const bbStyle = { ...STYLE['lg-b'], ...fontColor, ...style };
 
-    return <Text style={bbStyle}>Text-base-b</Text>;
+    return <Text style={bbStyle}>{text}</Text>;
 };
 
-const TextXlB = ({ props, color = {}, style = {} }: getStyleProps) => {
+const TextXlB = ({ props, color = {}, style = {}, text }: getStyleProps) => {
 
     const { getStyle } = useContext(ThemeContext);
 
@@ -112,10 +113,10 @@ const TextXlB = ({ props, color = {}, style = {} }: getStyleProps) => {
 
     const bbStyle = { ...STYLE['xl-b'], ...fontColor, ...style };
 
-    return <Text style={bbStyle}>Text-base-b</Text>;
+    return <Text style={bbStyle}>{text}</Text>;
 };
 
-const TextXlSb = ({ props, color = {}, style = {} }: getStyleProps) => {
+const TextXlSb = ({ props, color = {}, style = {}, text }: getStyleProps) => {
 
     const { getStyle } = useContext(ThemeContext);
 
@@ -123,10 +124,8 @@ const TextXlSb = ({ props, color = {}, style = {} }: getStyleProps) => {
 
     const bbStyle = { ...STYLE['xl-sb'], ...fontColor, ...style };
 
-    return <Text style={bbStyle}>Text-base-b</Text>;
+    return <Text style={bbStyle}>{text}</Text>;
 };
-
-
 
 export { TextSmSb, TextBSb, TextBB, TextBRg, TextLgRg, TextLgB, TextXlB, TextXlSb };
 

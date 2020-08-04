@@ -5,7 +5,7 @@
 import React, { useContext } from 'react';
 import { StyleSheet, Image } from 'react-native'; //@todo image will get from rn-ui-components
 import { ThemeContext, GetStyle } from 'rn-themed-tailwind';
-import { View, Text, TouchableOpacity } from 'rn-ui-components';
+import { View, Text, TouchableOpacity } from '../index';
 
 const CardHeader = ({ props }) => {
 
