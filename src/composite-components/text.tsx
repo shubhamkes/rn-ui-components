@@ -39,7 +39,7 @@ type getStyleProps = {
     color?: { color?: string }
 }
 
-const TextSmSb = ({ props, color = {}, style = {}, text }: getStyleProps) => {
+const TextSmSb = ({ props, color, style = {}, text }: getStyleProps) => {
 
     const { getStyle } = useContext(ThemeContext);
 
@@ -50,7 +50,7 @@ const TextSmSb = ({ props, color = {}, style = {}, text }: getStyleProps) => {
     return <Text style={smSbStyle}>{text}</Text>;
 };
 
-const TextBSb = ({ props, color = {}, style = {}, text }: getStyleProps) => {
+const TextBSb = ({ props, color, style = {}, text }: getStyleProps) => {
 
     const { getStyle } = useContext(ThemeContext);
 
@@ -61,7 +61,7 @@ const TextBSb = ({ props, color = {}, style = {}, text }: getStyleProps) => {
     return <Text style={smSbStyle}>{text}</Text>;
 };
 
-const TextBB = ({ props, color = {}, style = {}, text }: getStyleProps) => {
+const TextBB = ({ props, color, style = {}, text }: getStyleProps) => {
 
     const { getStyle } = useContext(ThemeContext);
 
@@ -72,7 +72,7 @@ const TextBB = ({ props, color = {}, style = {}, text }: getStyleProps) => {
     return <Text style={bbStyle}>{text}</Text>;
 };
 
-const TextBRg = ({ props, color = {}, style = {}, text }: getStyleProps) => {
+const TextBRg = ({ props, color, style = {}, text }: getStyleProps) => {
 
     const { getStyle } = useContext(ThemeContext);
 
@@ -83,7 +83,7 @@ const TextBRg = ({ props, color = {}, style = {}, text }: getStyleProps) => {
     return <Text style={bbStyle}>{text}</Text>;
 };
 
-const TextLgRg = ({ props, color = {}, style = {}, text }: getStyleProps) => {
+const TextLgRg = ({ props, color, style = {}, text }: getStyleProps) => {
 
     const { getStyle } = useContext(ThemeContext);
 
@@ -94,7 +94,7 @@ const TextLgRg = ({ props, color = {}, style = {}, text }: getStyleProps) => {
     return <Text style={bbStyle}>{text}</Text>;
 };
 
-const TextLgB = ({ props, color = {}, style = {}, text }: getStyleProps) => {
+const TextLgB = ({ props, color, style = {}, text }: getStyleProps) => {
 
     const { getStyle } = useContext(ThemeContext);
 
@@ -105,7 +105,7 @@ const TextLgB = ({ props, color = {}, style = {}, text }: getStyleProps) => {
     return <Text style={bbStyle}>{text}</Text>;
 };
 
-const TextXlB = ({ props, color = {}, style = {}, text }: getStyleProps) => {
+const TextXlB = ({ props, color, style = {}, text }: getStyleProps) => {
 
     const { getStyle } = useContext(ThemeContext);
 
@@ -116,7 +116,7 @@ const TextXlB = ({ props, color = {}, style = {}, text }: getStyleProps) => {
     return <Text style={bbStyle}>{text}</Text>;
 };
 
-const TextXlSb = ({ props, color = {}, style = {}, text }: getStyleProps) => {
+const TextXlSb = ({ props, color, style = {}, text }: getStyleProps) => {
 
     const { getStyle } = useContext(ThemeContext);
 
