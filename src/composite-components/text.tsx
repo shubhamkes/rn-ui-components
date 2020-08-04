@@ -8,6 +8,35 @@ import { StyleSheet } from 'react-native';
 import { ThemeContext, GetStyle } from 'rn-themed-tailwind';
 import { Text } from '../index';
 
+const STYLE = StyleSheet.create({
+    "sm-sb": GetStyle('text-sm font-semibold'),
+    "b-sb": GetStyle('text-base font-semibold'),
+    "b-b": GetStyle('text-base font-semibold'),
+    "b-rg": GetStyle('text-base font-semibold'),
+    "lg-rg": GetStyle('text-lg font-normal '),
+    "lg-b": GetStyle('text-lg font-bold'),
+    "xl-b": GetStyle('text-xl font-bold '),
+    "xl-sb": GetStyle('text-xl font-semibold ')
+});
+
+/**
+ *font-size
+sm=10
+base=12
+lg==14
+xl=16
+
+* font-weight
+regular/normal==400
+sb==500 ==semibold
+b==600==bold
+ */
+
+type getStyleProps = {
+    style?: any,
+    [key: string]: any,
+    color?: { color?: string }
+}
 
 const TextSmSb = ({ props, color = {}, style = {} }: getStyleProps) => {
 
@@ -97,22 +126,7 @@ const TextXlSb = ({ props, color = {}, style = {} }: getStyleProps) => {
     return <Text style={bbStyle}>Text-base-b</Text>;
 };
 
-const STYLE = StyleSheet.create({
-    "sm-sb": GetStyle('text-sm font-semibold'),
-    "b-sb": GetStyle('text-base font-semibold'),
-    "b-b": GetStyle('text-base font-semibold'),
-    "b-rg": GetStyle('text-base font-semibold'),
-    "lg-rg": GetStyle('text-lg font-normal '),
-    "lg-b": GetStyle('text-lg font-bold'),
-    "xl-b": GetStyle('text-xl font-bold '),
-    "xl-sb": GetStyle('text-xl font-semibold ')
-});
 
-type getStyleProps = {
-    style?: any,
-    [key: string]: any,
-    color?: { color?: string }
-}
 
 export { TextSmSb, TextBSb, TextBB, TextBRg, TextLgRg, TextLgB, TextXlB, TextXlSb };
 
