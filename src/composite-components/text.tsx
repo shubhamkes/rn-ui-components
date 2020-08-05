@@ -8,7 +8,7 @@ import { StyleSheet } from 'react-native';
 import { ThemeContext, GetStyle } from 'rn-themed-tailwind';
 import { Text } from '../index';
 
-const STYLE = StyleSheet.create({
+const TEXT_STYLE = StyleSheet.create({
     "sm-sb": GetStyle('text-sm font-semibold'),
     "b-sb": GetStyle('text-base font-semibold'),
     "b-b": GetStyle('text-base font-semibold'),
@@ -33,99 +33,100 @@ b==600==bold
  */
 
 type getStyleProps = {
+    children?: React.ReactNode,
     text: string,
     [key: string]: any,
     style?: any,
     color?: { color?: string }
 }
 
-const TextSmSb = ({ props, color, style = {}, text }: getStyleProps) => {
+const TextSmSb = ({ props, color, style = {}, children }: getStyleProps) => {
 
     const { getStyle } = useContext(ThemeContext);
 
-    const fontColor = color || getStyle('text-onSurfaceColor-100');
+    const fontColor = getStyle(color || 'text-onSurfaceColor-100');
 
-    const smSbStyle = { ...STYLE['sm-sb'], ...fontColor, ...style };
+    const smSbStyle = { ...TEXT_STYLE['sm-sb'], ...fontColor, ...style };
 
-    return <Text style={smSbStyle}>{text}</Text>;
+    return <Text style={smSbStyle}>{children}</Text>;
 };
 
-const TextBSb = ({ props, color, style = {}, text }: getStyleProps) => {
+const TextBSb = ({ props, color, style = {}, children }: getStyleProps) => {
 
     const { getStyle } = useContext(ThemeContext);
 
-    const fontColor = color || getStyle('text-onSurfaceColor-200');
+    const fontColor = getStyle(color || 'text-onSurfaceColor-100');
 
-    const smSbStyle = { ...STYLE['b-sb'], ...fontColor, ...style };
+    const smSbStyle = { ...TEXT_STYLE['b-sb'], ...fontColor, ...style };
 
-    return <Text style={smSbStyle}>{text}</Text>;
+    return <Text style={smSbStyle}>{children}</Text>;
 };
 
-const TextBB = ({ props, color, style = {}, text }: getStyleProps) => {
+const TextBB = ({ props, color, style = {}, children }: getStyleProps) => {
 
     const { getStyle } = useContext(ThemeContext);
 
-    const fontColor = color || getStyle('text-onSurfaceColor-200');
+    const fontColor = getStyle(color || 'text-onSurfaceColor-200');
 
-    const bbStyle = { ...STYLE['b-b'], ...fontColor, ...style };
+    const bbStyle = { ...TEXT_STYLE['b-b'], ...fontColor, ...style };
 
-    return <Text style={bbStyle}>{text}</Text>;
+    return <Text style={bbStyle}>{children}</Text>;
 };
 
-const TextBRg = ({ props, color, style = {}, text }: getStyleProps) => {
+const TextBRg = ({ props, color, style = {}, children }: getStyleProps) => {
 
     const { getStyle } = useContext(ThemeContext);
 
-    const fontColor = color || getStyle('text-onSurfaceColor-200');
+    const fontColor = getStyle(color || 'text-onSurfaceColor-200');
 
-    const bbStyle = { ...STYLE['b-rg'], ...fontColor, ...style };
+    const bbStyle = { ...TEXT_STYLE['b-rg'], ...fontColor, ...style };
 
-    return <Text style={bbStyle}>{text}</Text>;
+    return <Text style={bbStyle}>{children}</Text>;
 };
 
-const TextLgRg = ({ props, color, style = {}, text }: getStyleProps) => {
+const TextLgRg = ({ props, color, style = {}, children }: getStyleProps) => {
 
     const { getStyle } = useContext(ThemeContext);
 
-    const fontColor = color || getStyle('text-onSurfaceColor-200');
+    const fontColor = getStyle(color || 'text-onSurfaceColor-200');
 
-    const bbStyle = { ...STYLE['lg-rg'], ...fontColor, ...style };
+    const bbStyle = { ...TEXT_STYLE['lg-rg'], ...fontColor, ...style };
 
-    return <Text style={bbStyle}>{text}</Text>;
+    return <Text style={bbStyle}>{children}</Text>;
 };
 
-const TextLgB = ({ props, color, style = {}, text }: getStyleProps) => {
+const TextLgB = ({ props, color, style = {}, children }: getStyleProps) => {
 
     const { getStyle } = useContext(ThemeContext);
 
-    const fontColor = color || getStyle('text-onSurfaceColor-200');
+    const fontColor = getStyle(color || 'text-onSurfaceColor-200');
 
-    const bbStyle = { ...STYLE['lg-b'], ...fontColor, ...style };
+    const bbStyle = { ...TEXT_STYLE['lg-b'], ...fontColor, ...style };
 
-    return <Text style={bbStyle}>{text}</Text>;
+    return <Text style={bbStyle}>{children}</Text>;
 };
 
-const TextXlB = ({ props, color, style = {}, text }: getStyleProps) => {
+const TextXlB = ({ props, color, style = {}, children }: getStyleProps) => {
 
     const { getStyle } = useContext(ThemeContext);
 
-    const fontColor = color || getStyle('text-onSurfaceColor-200');
+    const fontColor = getStyle(color || 'text-onSurfaceColor-200');
 
-    const bbStyle = { ...STYLE['xl-b'], ...fontColor, ...style };
+    const bbStyle = { ...TEXT_STYLE['xl-b'], ...fontColor, ...style };
 
-    return <Text style={bbStyle}>{text}</Text>;
+    return <Text style={bbStyle}>{children}</Text>;
 };
 
-const TextXlSb = ({ props, color, style = {}, text }: getStyleProps) => {
+const TextXlSb = ({ props, color, style = {}, children }: getStyleProps) => {
 
     const { getStyle } = useContext(ThemeContext);
 
-    const fontColor = color || getStyle('text-onSurfaceColor-200');
+    const fontColor = getStyle(color || 'text-onSurfaceColor-200');
 
-    const bbStyle = { ...STYLE['xl-sb'], ...fontColor, ...style };
+    const bbStyle = { ...TEXT_STYLE['xl-sb'], ...fontColor, ...style };
 
-    return <Text style={bbStyle}>{text}</Text>;
+    return <Text style={bbStyle}>{children}</Text>;
 };
 
-export { TextSmSb, TextBSb, TextBB, TextBRg, TextLgRg, TextLgB, TextXlB, TextXlSb };
+export { TextSmSb, TextBSb, TextBB, TextBRg, TextLgRg, TextLgB, TextXlB, TextXlSb, TEXT_STYLE };
 
