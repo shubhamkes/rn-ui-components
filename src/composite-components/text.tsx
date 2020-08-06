@@ -34,10 +34,9 @@ b==600==bold
 
 type getStyleProps = {
     children?: React.ReactNode,
-    text: string,
     [key: string]: any,
     style?: any,
-    color?: { color?: string }
+    color?: string
 }
 
 const TextSmSb = ({ props, color, style = {}, children }: getStyleProps) => {
