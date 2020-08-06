@@ -9,14 +9,15 @@ import { ThemeContext, GetStyle } from "rn-themed-tailwind";
 import { Text } from "../index";
 
 const TEXT_STYLE = StyleSheet.create({
-    "sm-sb": GetStyle("text-sm font-semibold"),
-    "b-sb": GetStyle("text-base font-semibold"),
-    "b-b": GetStyle("text-base font-semibold"),
-    "b-rg": GetStyle("text-base font-semibold"),
-    "lg-rg": GetStyle("text-lg font-normal "),
-    "lg-b": GetStyle("text-lg font-bold"),
-    "xl-b": GetStyle("text-xl font-bold "),
-    "xl-sb": GetStyle("text-xl font-semibold "),
+    "sm-sb": { ...GetStyle("text-sm font-semibold"), fontFamily: 'ProximaNovaSemibold' },
+    "sm-b": { ...GetStyle("text-sm font-bold"), fontFamily: 'ProximaNovaBold' },
+    "b-sb": { ...GetStyle("text-base font-semibold"), fontFamily: 'ProximaNovaSemibold' },
+    "b-b": { ...GetStyle("text-base font-bold"), fontFamily: 'ProximaNovaBold' },
+    "b-rg": { ...GetStyle("text-base font-normal"), fontFamily: 'ProximaNovaRegular' },
+    "lg-rg": { ...GetStyle("text-lg font-normal "), fontFamily: 'ProximaNovaRegular' },
+    "lg-b": { ...GetStyle("text-lg font-bold"), fontFamily: 'ProximaNovaBold' },
+    "xl-sb": { ...GetStyle("text-xl font-semibold "), fontFamily: 'ProximaNovaSemibold' },
+    "xl-b": { ...GetStyle("text-xl font-bold "), fontFamily: 'ProximaNovaBold' },
 });
 
 /**
@@ -39,6 +40,16 @@ type getStyleProps = {
     color?: string
 }
 
+const TextSmB = ({ props, color, style = {}, children }: getStyleProps) => {
+    const { getStyle } = useContext(ThemeContext);
+
+    const fontColor = getStyle(color || "text-onSurfaceColor-100");
+
+    const smSbStyle = { ...TEXT_STYLE["sm-b"], ...fontColor, ...style };
+
+    return <Text style={smSbStyle}>{children}</Text>;
+};
+
 const TextSmSb = ({ props, color, style = {}, children }: getStyleProps) => {
     const { getStyle } = useContext(ThemeContext);
 
@@ -52,7 +63,7 @@ const TextSmSb = ({ props, color, style = {}, children }: getStyleProps) => {
 const TextBSb = ({ props, color, style = {}, children }: getStyleProps) => {
     const { getStyle } = useContext(ThemeContext);
 
-    const fontColor = getStyle(color || "text-onSurfaceColor-100");
+    const fontColor = getStyle(color || "text-onSurfaceColor-200");
 
     const smSbStyle = { ...TEXT_STYLE["b-sb"], ...fontColor, ...style };
 
@@ -120,6 +131,7 @@ const TextXlSb = ({ props, color, style = {}, children }: getStyleProps) => {
 };
 
 export {
+    TextSmB,
     TextSmSb,
     TextBSb,
     TextBB,
