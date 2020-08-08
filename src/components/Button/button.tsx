@@ -1,6 +1,6 @@
 /* eslint-disable import/no-unresolved, import/extensions */
 import { View, Text, StyleSheet } from 'react-native';
-import React, { PureComponent, useState, useContext } from 'react';
+import React, { PureComponent, useState, useContext, ReactNode } from 'react';
 import PropTypes, { func } from 'prop-types';
 import { ThemeContext } from 'rn-themed-tailwind';
 
@@ -100,7 +100,7 @@ function GetStyles({ primary, accent, disabled, raised, elevation, style = {}, g
 
     if (!disabled) {
         if (primary && !raised) {
-            local.text = getStyle('text-primaryColor-100');
+            local.text = getStyle('text-onPrimaryColor');
             // local.text = { color: palette.primaryColor };
         } else if (accent && !raised) {
             local.text = { color: '#f24434' };
@@ -109,7 +109,7 @@ function GetStyles({ primary, accent, disabled, raised, elevation, style = {}, g
         }
 
         if (primary && raised) {
-            local.container.backgroundColor = getColor('primaryColor-100')
+            local.container.backgroundColor = getColor('primaryColor-500')
             // palette.primaryColor;
             local.text = getStyle('text-onPrimaryColor');
         } else if (accent && raised) {
@@ -156,8 +156,20 @@ function GetStyles({ primary, accent, disabled, raised, elevation, style = {}, g
     };
 }
 
+type ButtonProps = {
+    text?: string,
+    onPress?: Function,
+    icon?: string | ReactNode,
+    disabled?: boolean,
+    raised?: boolean,
+    upperCase?: boolean,
+    onLongPress?: Function,
+    primary?: boolean,
+    accent?: boolean,
+    style?: { [key: string]: any }
+}
 
-export const Button = ({ text, onPress, icon, iconSet, disabled, raised, upperCase, onLongPress = () => { }, testID, primary, accent, style }) => {
+export const Button = ({ text, onPress, icon, disabled, raised, upperCase, onLongPress = () => { }, primary, accent, style }: ButtonProps) => {
     const [elevation, setElevation] = useState(2);
 
     const { getStyle, getColor } = useContext(ThemeContext);

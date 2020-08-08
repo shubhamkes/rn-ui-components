@@ -15,6 +15,7 @@ const TEXT_STYLE = StyleSheet.create({
     "b-b": { ...GetStyle("text-base font-bold"), fontFamily: 'ProximaNovaBold' },
     "b-rg": { ...GetStyle("text-base font-normal"), fontFamily: 'ProximaNovaRegular' },
     "lg-rg": { ...GetStyle("text-lg font-normal "), fontFamily: 'ProximaNovaRegular' },
+    "lg-sb": { ...GetStyle("text-lg font-semibold"), fontFamily: 'ProximaNovaSemibold' },
     "lg-b": { ...GetStyle("text-lg font-bold"), fontFamily: 'ProximaNovaBold' },
     "xl-sb": { ...GetStyle("text-xl font-semibold "), fontFamily: 'ProximaNovaSemibold' },
     "xl-b": { ...GetStyle("text-xl font-bold "), fontFamily: 'ProximaNovaBold' },
@@ -100,6 +101,17 @@ const TextLgRg = ({ props, color, style = {}, children }: getStyleProps) => {
     return <Text style={bbStyle}>{children}</Text>;
 };
 
+const TextLgSb = ({ props, color, style = {}, children }: getStyleProps) => {
+    const { getStyle } = useContext(ThemeContext);
+
+    const fontColor = getStyle(color || "text-onSurfaceColor-200");
+
+    const bbStyle = { ...TEXT_STYLE["lg-sb"], ...fontColor, ...style };
+
+    return <Text style={bbStyle}>{children}</Text>;
+};
+
+
 const TextLgB = ({ props, color, style = {}, children }: getStyleProps) => {
     const { getStyle } = useContext(ThemeContext);
 
@@ -137,6 +149,7 @@ export {
     TextBB,
     TextBRg,
     TextLgRg,
+    TextLgSb,
     TextLgB,
     TextXlB,
     TextXlSb,
