@@ -15,7 +15,8 @@
     "peerDependencies": {
         "react": ">=16.13.1",
         "react-native": ">=0.62.2",
-        "react-native-fast-image": "^8.1.5"
+        "react-native-fast-image": "^8.1.5",
+        "react-native-paper": ">=4.0.1"
     },
     "dependencies": {
         "@types/node": "^14.0.13",

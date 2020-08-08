@@ -1,7 +1,13 @@
 /**
 * Name: Custom Image component
 * Description: Used to render an image on the screen
+*  <Image 
+        progressiveRenderingEnabled={true} 
+        style={{ resizeMode: 'contain', height: 200 }} 
+        source={GoogleIconButton()} 
+    />
 */
+
 import React from 'react';
 import { Image } from 'react-native';
 import FastImage from 'react-native-fast-image';
@@ -28,9 +34,14 @@ const CustomImage = ({ style = {}, source, ...props }: ImageProps) => {
         console.warn('Link react-native-fastimage from better performance');
     }
 
+    let resizeMode = FastImage.resizeMode.cover;
+    if (style.resizeMode) {
+        resizeMode = FastImage.resizeMode[style.resizeMode];
+    }
 
     return (
         <ImageComponent
+            resizeMode={resizeMode}
             source={source}
             {...props}
             style={style}

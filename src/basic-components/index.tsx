@@ -1,10 +1,10 @@
 export * from './customView';
 export * from './customTouchableOpacity';
-// export * from './customButton';
+export * from './customButton';
 export * from './customImage';
 // export * from './customImageBackground';
 export * from './customText';
-// export * from './customTextInput';
+export * from './customTextInput';
 // export * from './customSwitch';
 // export * from './customCheckBox';
 // export * from './customRadioButton';
