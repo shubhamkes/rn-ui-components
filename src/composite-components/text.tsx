@@ -48,7 +48,7 @@ const TextSmB = ({ props, color, style = {}, children }: getStyleProps) => {
 
     const smSbStyle = { ...TEXT_STYLE["sm-b"], ...fontColor, ...style };
 
-    return <Text style={smSbStyle}>{children}</Text>;
+    return <Text style={smSbStyle} {...props}>{children}</Text>;
 };
 
 const TextSmSb = ({ props, color, style = {}, children }: getStyleProps) => {
@@ -58,7 +58,7 @@ const TextSmSb = ({ props, color, style = {}, children }: getStyleProps) => {
 
     const smSbStyle = { ...TEXT_STYLE["sm-sb"], ...fontColor, ...style };
 
-    return <Text style={smSbStyle}>{children}</Text>;
+    return <Text style={smSbStyle} {...props}>{children}</Text>;
 };
 
 const TextBSb = ({ props, color, style = {}, children }: getStyleProps) => {
@@ -68,7 +68,7 @@ const TextBSb = ({ props, color, style = {}, children }: getStyleProps) => {
 
     const smSbStyle = { ...TEXT_STYLE["b-sb"], ...fontColor, ...style };
 
-    return <Text style={smSbStyle}>{children}</Text>;
+    return <Text style={smSbStyle} {...props}>{children}</Text>;
 };
 
 const TextBB = ({ props, color, style = {}, children }: getStyleProps) => {
@@ -78,7 +78,7 @@ const TextBB = ({ props, color, style = {}, children }: getStyleProps) => {
 
     const bbStyle = { ...TEXT_STYLE["b-b"], ...fontColor, ...style };
 
-    return <Text style={bbStyle}>{children}</Text>;
+    return <Text style={bbStyle} {...props}>{children}</Text>;
 };
 
 const TextBRg = ({ props, color, style = {}, children }: getStyleProps) => {
@@ -88,7 +88,7 @@ const TextBRg = ({ props, color, style = {}, children }: getStyleProps) => {
 
     const bbStyle = { ...TEXT_STYLE["b-rg"], ...fontColor, ...style };
 
-    return <Text style={bbStyle}>{children}</Text>;
+    return <Text style={bbStyle} {...props}>{children}</Text>;
 };
 
 const TextLgRg = ({ props, color, style = {}, children }: getStyleProps) => {
@@ -98,7 +98,7 @@ const TextLgRg = ({ props, color, style = {}, children }: getStyleProps) => {
 
     const bbStyle = { ...TEXT_STYLE["lg-rg"], ...fontColor, ...style };
 
-    return <Text style={bbStyle}>{children}</Text>;
+    return <Text style={bbStyle} {...props}>{children}</Text>;
 };
 
 const TextLgSb = ({ props, color, style = {}, children }: getStyleProps) => {
@@ -108,7 +108,7 @@ const TextLgSb = ({ props, color, style = {}, children }: getStyleProps) => {
 
     const bbStyle = { ...TEXT_STYLE["lg-sb"], ...fontColor, ...style };
 
-    return <Text style={bbStyle}>{children}</Text>;
+    return <Text style={bbStyle} {...props}>{children}</Text>;
 };
 
 
@@ -119,7 +119,7 @@ const TextLgB = ({ props, color, style = {}, children }: getStyleProps) => {
 
     const bbStyle = { ...TEXT_STYLE["lg-b"], ...fontColor, ...style };
 
-    return <Text style={bbStyle}>{children}</Text>;
+    return <Text style={bbStyle} {...props}>{children}</Text>;
 };
 
 const TextXlB = ({ props, color, style = {}, children }: getStyleProps) => {
@@ -129,7 +129,7 @@ const TextXlB = ({ props, color, style = {}, children }: getStyleProps) => {
 
     const bbStyle = { ...TEXT_STYLE["xl-b"], ...fontColor, ...style };
 
-    return <Text style={bbStyle}>{children}</Text>;
+    return <Text style={bbStyle} {...props}>{children}</Text>;
 };
 
 const TextXlSb = ({ props, color, style = {}, children }: getStyleProps) => {
@@ -139,7 +139,7 @@ const TextXlSb = ({ props, color, style = {}, children }: getStyleProps) => {
 
     const bbStyle = { ...TEXT_STYLE["xl-sb"], ...fontColor, ...style };
 
-    return <Text style={bbStyle}>{children}</Text>;
+    return <Text style={bbStyle} {...props}>{children}</Text>;
 };
 
 export {
