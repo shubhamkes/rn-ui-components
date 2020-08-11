@@ -4,21 +4,31 @@
  */
 
 import React, { useContext } from "react";
-import { StyleSheet } from "react-native";
+import { StyleSheet, Platform } from "react-native";
 import { ThemeContext, GetStyle } from "rn-themed-tailwind";
 import { Text } from "../index";
 
+const Fonts = Platform.android ? {
+    ProximaNovaSemibold: 'ProximaNovaSemibold',
+    ProximaNovaBold: 'ProximaNovaBold',
+    ProximaNovaRegular: 'ProximaNovaRegular',
+} : {
+        ProximaNovaSemibold: 'ProximaNova-Semibold',
+        ProximaNovaBold: 'ProximaNova-Bold',
+        ProximaNovaRegular: 'ProximaNova-Regular',
+    }
+
 const TEXT_STYLE = StyleSheet.create({
-    "sm-sb": { ...GetStyle("text-sm font-semibold"), fontFamily: 'ProximaNovaSemibold' },
-    "sm-b": { ...GetStyle("text-sm font-bold"), fontFamily: 'ProximaNovaBold' },
-    "b-sb": { ...GetStyle("text-base font-semibold"), fontFamily: 'ProximaNovaSemibold' },
-    "b-b": { ...GetStyle("text-base font-bold"), fontFamily: 'ProximaNovaBold' },
-    "b-rg": { ...GetStyle("text-base font-normal"), fontFamily: 'ProximaNovaRegular' },
-    "lg-rg": { ...GetStyle("text-lg font-normal "), fontFamily: 'ProximaNovaRegular' },
-    "lg-sb": { ...GetStyle("text-lg font-semibold"), fontFamily: 'ProximaNovaSemibold' },
-    "lg-b": { ...GetStyle("text-lg font-bold"), fontFamily: 'ProximaNovaBold' },
-    "xl-sb": { ...GetStyle("text-xl font-semibold "), fontFamily: 'ProximaNovaSemibold' },
-    "xl-b": { ...GetStyle("text-xl font-bold "), fontFamily: 'ProximaNovaBold' },
+    "sm-sb": { ...GetStyle("text-sm font-semibold"), fontFamily: Fonts.ProximaNovaSemibold },
+    "sm-b": { ...GetStyle("text-sm font-bold"), fontFamily: Fonts.ProximaNovaBold },
+    "b-sb": { ...GetStyle("text-base font-semibold"), fontFamily: Fonts.ProximaNovaSemibold },
+    "b-b": { ...GetStyle("text-base font-bold"), fontFamily: Fonts.ProximaNovaBold },
+    "b-rg": { ...GetStyle("text-base font-normal"), fontFamily: Fonts.ProximaNovaRegular },
+    "lg-rg": { ...GetStyle("text-lg font-normal "), fontFamily: Fonts.ProximaNovaRegular },
+    "lg-sb": { ...GetStyle("text-lg font-semibold"), fontFamily: Fonts.ProximaNovaSemibold },
+    "lg-b": { ...GetStyle("text-lg font-bold"), fontFamily: Fonts.ProximaNovaBold },
+    "xl-sb": { ...GetStyle("text-xl font-semibold "), fontFamily: Fonts.ProximaNovaSemibold },
+    "xl-b": { ...GetStyle("text-xl font-bold "), fontFamily: Fonts.ProximaNovaBold },
 });
 
 /**
