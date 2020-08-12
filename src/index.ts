@@ -7,3 +7,5 @@ export * as RippleFeedback from "./components/Ripple-Feedback";
 export { Card } from "./components/Card/card";
 
 export * from "./composite-components";
+
+export * from './utils/platform.utils';
