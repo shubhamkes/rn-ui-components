@@ -33,6 +33,21 @@ function isCompositeTypeElement(element) {
     return isElement(element) && typeof element.type === 'function';
 }
 
+/**
+ * Return component depends on function and element component
+ * @param {} component 
+ */
+function GetComponent(component) {
+    const Component = component;
+
+    if (isReactComponent(Component)) {
+        return component({});
+    }
+
+    return component;
+};
+
 export {
-    isClassComponent, isFunctionComponent, isReactComponent, isElement, isDOMTypeElement, isCompositeTypeElement
+    isClassComponent, isFunctionComponent, isReactComponent, isElement, isDOMTypeElement, isCompositeTypeElement,
+    GetComponent
 }
