@@ -29,7 +29,7 @@ type ImageProps = {
     [key: string]: any,
     source: any,
     size?: number
-    style?: number
+    style?: any
 };
 
 const Image = ({ style, source, size = 4, ...props }: ImageProps) => {
