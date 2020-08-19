@@ -29,9 +29,9 @@ export const ProgressButton = ({ ...props }) => {
   };
 
   const primaryDisabled = {
-    backgroundColor: getColor('grayColor-200'),
-    backgroundActive: getColor('grayColor-200'),
-    textColor: getColor('grayColor-700')
+    backgroundColor: getColor('disabledColor'),
+    backgroundActive: getColor('disabledColor'),
+    textColor: getColor('text-disabledColor')
   };
 
   const secondaryEnabled = {
