@@ -6,46 +6,67 @@
     />
  * 
 */
-import * as React from 'react';
-import { TextInput } from 'react-native-paper';
-import { StyleSheet } from 'react-native';
+import React, { useContext } from 'react';
+import { TextField } from '@ubaids/react-native-material-textfield';
+import { ThemeContext } from 'rn-themed-tailwind';
+
+const CustomTextInput = props => {
+  const { getColor } = useContext(ThemeContext);
+
+  const labelOffset = {
+    x1: -45,
+    y1: -5
+  };
+
+  return (
+    <TextField
+      {...props}
+      labelOffset={labelOffset}
+      disabledLineWidth={2}
+      labelFontSize={14}
+      lineWidth={1}
+      tintColor={getColor('text-onSecondaryColor')}
+      lineType={'solid'}
+      disabledLineType={'solid'}
+    />
+  );
+};
+
+export { CustomTextInput as TextInput };
 
 // type INPUT_PARAMS = {
 //     style?: any,
-//     // ts throws error on passing following types. 
+//     // ts throws error on passing following types.
 //     // @todo to be updated with proper types
 //     // "props": { label?: string, value?: unknown, onChangeText?: Function }
 //     label?: string, value?: unknown, onChangeText?: Function
 //     props?: any
 // }
 
-const TEXT_STYLE = {
-    backgroundColor: 'transparent'
-}
+// const TEXT_STYLE = {
+//     backgroundColor: 'transparent'
+// }
 
-const CustomTextInput = (props) => {
-    // const STLYES = props.style;
-    let style = TEXT_STYLE;
+// const CustomTextInput = (props) => {
+//     // const STLYES = props.style;
+//     let style = TEXT_STYLE;
 
-    if (props.style) {
-        style = { ...TEXT_STYLE, ...props.style, };
-    }
+//     if (props.style) {
+//         style = { ...TEXT_STYLE, ...props.style, };
+//     }
 
-    let type = 'flat';
-    if (props.type) {
-        type = props.type;
-    }
+//     let type = 'flat';
+//     if (props.type) {
+//         type = props.type;
+//     }
 
-    return (
-        <TextInput
-            {...props}
-            type={type}
-            style={style}
-        />
-    );
-};
-
-export { CustomTextInput as TextInput };
+//     return (
+//         <TextInput
+//             {...props}
+//             type={type}
+//             style={style}
+//         />
+//     );
 
 // /**
 // * Name: Custom Text Input component
@@ -143,7 +164,3 @@ export { CustomTextInput as TextInput };
 //         </View>
 //     )
 // }
-
-
-
-
