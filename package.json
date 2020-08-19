@@ -21,9 +21,9 @@
   "dependencies": {
     "@types/node": "^14.0.13",
     "@ubaids/react-native-material-textfield": "^0.16.3",
+    "@umangmaurya/react-native-really-awesome-button": "^1.0.0",
     "color": "^3.1.2",
     "prop-types": "^15.7.2",
-    "react-native-really-awesome-button": "rcaferati/react-native-really-awesome-button#master",
     "rn-themed-tailwind": "../rn-themed-tailwind"
   },
   "devDependencies": {

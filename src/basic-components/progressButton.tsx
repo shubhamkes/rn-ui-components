@@ -6,7 +6,7 @@
  */
 import React, { useContext } from 'react';
 
-import AwesomeButtonBlue from 'react-native-really-awesome-button/src/themes/blue';
+import AwesomeButtonBlue from '@umangmaurya/react-native-really-awesome-button/src/themes/blue';
 import { ThemeContext } from 'rn-themed-tailwind';
 
 export const ProgressButton = ({ ...props }) => {
