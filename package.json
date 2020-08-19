@@ -1,33 +1,35 @@
 {
-    "name": "rn-ui-components",
-    "version": "1.0.0",
-    "description": "unit level components such as card, buttons, checkbox, radiobutton in material design",
-    "main": "dist/index.js",
-    "module": "dist/index.d.ts",
-    "scripts": {
-        "lint": "tslint --project tsconfig.json",
-        "build": "rm -rf dist && tsc",
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "prepare": "install-peers"
-    },
-    "author": "Shubham Kesarwani <shubham.kesarwani89@gmail.com>",
-    "license": "MIT",
-    "peerDependencies": {
-        "react": ">=16.13.1",
-        "react-native": ">=0.62.2",
-        "react-native-fast-image": "^8.1.5",
-        "react-native-paper": ">=4.0.1"
-    },
-    "dependencies": {
-        "@types/node": "^14.0.13",
-        "color": "^3.1.2",
-        "prop-types": "^15.7.2",
-        "rn-themed-tailwind": "../rn-themed-tailwind"
-    },
-    "devDependencies": {
-        "@types/react": "^16.9.38",
-        "install-peers-cli": "^2.2.0",
-        "tslint": "^6.1.2",
-        "typescript": "^3.9.5"
-    }
+  "name": "rn-ui-components",
+  "version": "1.0.0",
+  "description": "unit level components such as card, buttons, checkbox, radiobutton in material design",
+  "main": "dist/index.js",
+  "module": "dist/index.d.ts",
+  "scripts": {
+    "lint": "tslint --project tsconfig.json",
+    "build": "rm -rf dist && tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "install-peers"
+  },
+  "author": "Shubham Kesarwani <shubham.kesarwani89@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=16.13.1",
+    "react-native": ">=0.62.2",
+    "react-native-fast-image": "^8.1.5",
+    "react-native-paper": ">=4.0.1"
+  },
+  "dependencies": {
+    "@types/node": "^14.0.13",
+    "@ubaids/react-native-material-textfield": "^0.16.3",
+    "color": "^3.1.2",
+    "prop-types": "^15.7.2",
+    "react-native-really-awesome-button": "rcaferati/react-native-really-awesome-button#master",
+    "rn-themed-tailwind": "../rn-themed-tailwind"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.38",
+    "install-peers-cli": "^2.2.0",
+    "tslint": "^6.1.2",
+    "typescript": "^3.9.5"
+  }
 }
