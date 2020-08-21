@@ -10,17 +10,18 @@ import React, { useContext } from 'react';
 import { TextField } from '@ubaids/react-native-material-textfield';
 import { ThemeContext } from 'rn-themed-tailwind';
 
-const CustomTextInput = props => {
+const CustomTextInput = React.forwardRef((props, ref) => {
   const { getColor } = useContext(ThemeContext);
 
   const labelOffset = {
-    x1: -45,
+    x1: -35,
     y1: -5
   };
 
   return (
     <TextField
       {...props}
+      ref={ref}
       labelOffset={labelOffset}
       disabledLineWidth={2}
       labelFontSize={14}
@@ -30,7 +31,7 @@ const CustomTextInput = props => {
       disabledLineType={'solid'}
     />
   );
-};
+});
 
 export { CustomTextInput as TextInput };
 
