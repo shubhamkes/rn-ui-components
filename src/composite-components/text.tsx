@@ -6,6 +6,9 @@
 import React, { useContext } from "react";
 import { StyleSheet, Platform } from "react-native";
 import { ThemeContext, GetStyle } from "rn-themed-tailwind";
+import { LocalizeContext } from 'react-locale-language';
+
+
 import { Text } from "../index";
 
 const Fonts = Platform.android ? {
@@ -44,112 +47,74 @@ sb==500 ==semibold
 b==600==bold
  */
 
-type getStyleProps = {
+interface GetStyleProps {
     children?: React.ReactNode,
     [key: string]: any,
     style?: any,
-    color?: string
-}
-
-const TextSmB = ({ props, color, style = {}, children }: getStyleProps) => {
-    const { getStyle } = useContext(ThemeContext);
-
-    const fontColor = getStyle(color || "text-onSurfaceColor-100");
-
-    const smSbStyle = { ...TEXT_STYLE["sm-b"], ...fontColor, ...style };
-
-    return <Text style={smSbStyle} {...props}>{children}</Text>;
+    color?: string,
+    translate?: boolean
 };
 
-const TextSmSb = ({ props, color, style = {}, children }: getStyleProps) => {
-    const { getStyle } = useContext(ThemeContext);
-
-    const fontColor = getStyle(color || "text-onSurfaceColor-100");
-
-    const smSbStyle = { ...TEXT_STYLE["sm-sb"], ...fontColor, ...style };
-
-    return <Text style={smSbStyle} {...props}>{children}</Text>;
+const TextSmB = ({ props, color, style = {}, children, translate }: GetStyleProps) => {
+    return <TextWrapper textStyle="sm-b" color={color} defaultColor="text-onSurfaceColor-100" props={props} translate={translate}> {children}</TextWrapper>
 };
 
-const TextBSb = ({ props, color, style = {}, children }: getStyleProps) => {
-    const { getStyle } = useContext(ThemeContext);
-
-    const fontColor = getStyle(color || "text-onSurfaceColor-200");
-
-    const smSbStyle = { ...TEXT_STYLE["b-sb"], ...fontColor, ...style };
-
-    return <Text style={smSbStyle} {...props}>{children}</Text>;
+const TextSmSb = ({ props, color, style = {}, children, translate }: GetStyleProps) => {
+    return <TextWrapper textStyle="sm-sb" style={style} color={color} defaultColor="text-onSurfaceColor-100" props={props} translate={translate}> {children}</TextWrapper>
 };
 
-const TextBB = ({ props, color, style = {}, children }: getStyleProps) => {
-    const { getStyle } = useContext(ThemeContext);
-
-    const fontColor = getStyle(color || "text-onSurfaceColor-200");
-
-    const bbStyle = { ...TEXT_STYLE["b-b"], ...fontColor, ...style };
-
-    return <Text style={bbStyle} {...props}>{children}</Text>;
+const TextBSb = ({ props, color, style = {}, children, translate }: GetStyleProps) => {
+    return <TextWrapper textStyle="b-sb" style={style} color={color} defaultColor="text-onSurfaceColor-200" props={props} translate={translate}> {children}</TextWrapper>
 };
 
-const TextBRg = ({ props, color, style = {}, children }: getStyleProps) => {
-    const { getStyle } = useContext(ThemeContext);
-
-    const fontColor = getStyle(color || "text-onSurfaceColor-200");
-
-    const bbStyle = { ...TEXT_STYLE["b-rg"], ...fontColor, ...style };
-
-    return <Text style={bbStyle} {...props}>{children}</Text>;
+const TextBB = ({ props, color, style = {}, children, translate }: GetStyleProps) => {
+    return <TextWrapper textStyle="b-b" style={style} color={color} defaultColor="text-onSurfaceColor-200" props={props} translate={translate}> {children}</TextWrapper>
 };
 
-const TextLgRg = ({ props, color, style = {}, children }: getStyleProps) => {
-    const { getStyle } = useContext(ThemeContext);
-
-    const fontColor = getStyle(color || "text-onSurfaceColor-200");
-
-    const bbStyle = { ...TEXT_STYLE["lg-rg"], ...fontColor, ...style };
-
-    return <Text style={bbStyle} {...props}>{children}</Text>;
+const TextBRg = ({ props, color, style = {}, children, translate }: GetStyleProps) => {
+    return <TextWrapper textStyle="b-rg" style={style} color={color} defaultColor="text-onSurfaceColor-200" props={props} translate={translate}> {children}</TextWrapper>
 };
 
-const TextLgSb = ({ props, color, style = {}, children }: getStyleProps) => {
-    const { getStyle } = useContext(ThemeContext);
-
-    const fontColor = getStyle(color || "text-onSurfaceColor-200");
-
-    const bbStyle = { ...TEXT_STYLE["lg-sb"], ...fontColor, ...style };
-
-    return <Text style={bbStyle} {...props}>{children}</Text>;
+const TextLgRg = ({ props, color, style = {}, children, translate }: GetStyleProps) => {
+    return <TextWrapper textStyle="lg-rg" style={style} color={color} defaultColor="text-onSurfaceColor-200" props={props} translate={translate}> {children}</TextWrapper>
 };
 
+const TextLgSb = ({ props, color, style = {}, children, translate }: GetStyleProps) => {
+    return <TextWrapper textStyle="lg-sb" style={style} color={color} defaultColor="text-onSurfaceColor-200" props={props} translate={translate}> {children}</TextWrapper>
 
-const TextLgB = ({ props, color, style = {}, children }: getStyleProps) => {
-    const { getStyle } = useContext(ThemeContext);
-
-    const fontColor = getStyle(color || "text-onSurfaceColor-200");
-
-    const bbStyle = { ...TEXT_STYLE["lg-b"], ...fontColor, ...style };
-
-    return <Text style={bbStyle} {...props}>{children}</Text>;
 };
 
-const TextXlB = ({ props, color, style = {}, children }: getStyleProps) => {
-    const { getStyle } = useContext(ThemeContext);
-
-    const fontColor = getStyle(color || "text-onSurfaceColor-200");
-
-    const bbStyle = { ...TEXT_STYLE["xl-b"], ...fontColor, ...style };
-
-    return <Text style={bbStyle} {...props}>{children}</Text>;
+const TextLgB = ({ props, color, style = {}, children, translate }: GetStyleProps) => {
+    return <TextWrapper textStyle="lg-b" style={style} color={color} defaultColor="text-onSurfaceColor-200" props={props} translate={translate}> {children}</TextWrapper>
 };
 
-const TextXlSb = ({ props, color, style = {}, children }: getStyleProps) => {
+const TextXlB = ({ props, color, style = {}, children, translate }: GetStyleProps) => {
+    return <TextWrapper textStyle="xl-b" style={style} color={color} defaultColor="text-onSurfaceColor-200" props={props} translate={translate}> {children}</TextWrapper>
+};
+
+const TextXlSb = ({ props, color, style = {}, children, translate }: GetStyleProps) => {
+    return <TextWrapper textStyle="xl-sb" style={style} color={color} defaultColor="text-onSurfaceColor-200" props={props} translate={translate}> {children}</TextWrapper>
+};
+
+interface TextWrapperStyle extends GetStyleProps {
+    textStyle: string
+};
+
+const TextWrapper = ({ style, color, defaultColor, children, translate, props, }: TextWrapperStyle) => {
+
     const { getStyle } = useContext(ThemeContext);
 
-    const fontColor = getStyle(color || "text-onSurfaceColor-200");
+    // const { translate: doTranslate } = useContext(LocalizeContext);
 
-    const bbStyle = { ...TEXT_STYLE["xl-sb"], ...fontColor, ...style };
+    const texts = children;
+    // const texts = translate ? doTranslate(children) : children;
+    // console.log('texts', texts, children);
 
-    return <Text style={bbStyle} {...props}>{children}</Text>;
+    const fontColor = getStyle(color || defaultColor);
+
+    const Style = { ...TEXT_STYLE[style], ...fontColor, ...style };
+
+    return <Text style={Style} {...props}>{texts}</Text>;
 };
 
 export {
@@ -165,4 +130,3 @@ export {
     TextXlSb,
     TEXT_STYLE,
 };
-
