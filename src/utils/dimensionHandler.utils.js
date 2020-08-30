@@ -3,6 +3,8 @@ import { Dimensions, Platform, PixelRatio } from 'react-native';
 const { height, width } = Dimensions.get('window');
 const scale = width / 360;
 
+export { height, width };
+
 /**
  * @param  {number} value
  * Calculates the relative dp for the absolute values given to stylesheet fields
