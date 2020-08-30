@@ -109,16 +109,19 @@ interface TextWrapperStyle extends GetStyleProps {
 
 const TextWrapper = ({ textStyle, style, color, defaultColor, children, textVar, text, allowFontScaling = true, ...textProps }: TextWrapperStyle) => {
 
-    const { getColor } = useContext(ThemeContext);
+    const { getStyle } = useContext(ThemeContext);
 
     const { translate: doTranslate } = useContext((window as any).LocalizeContext);
 
     // translation only applies to text
     const texts = text ? doTranslate(text, textVar) : children;
 
-    const fontColor = getColor(color || defaultColor);
+    const fontColor = getStyle(color || defaultColor);
+    // if (color) {
+    //     console.log(' getColor(color ', color, getStyle(color));
+    // }
 
-    const Style = { ...TEXT_STYLE[textStyle], ...fontColor, ...style };
+    const Style = StyleSheet.flatten([TEXT_STYLE[textStyle], fontColor, style]);
 
     return <Text style={Style} allowFontScaling={allowFontScaling} {...textProps}>{texts}</Text>;
 };
