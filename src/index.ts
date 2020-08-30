@@ -8,3 +8,5 @@ export * from './components/Ripple';
 export * from "./composite-components";
 
 export * from './utils/platform.utils';
+
+export * from './utils/dimensionHandler.utils';
