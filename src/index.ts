@@ -10,3 +10,7 @@ export * from "./composite-components";
 export * from './utils/platform.utils';
 
 export * from './utils/dimensionHandler.utils';
+
+export function InitLibrary({ LocalizeContext }) {
+    (window as any).LocalizeContext = LocalizeContext;
+}
