@@ -10,16 +10,25 @@ import AwesomeButtonBlue from '@umangmaurya/react-native-really-awesome-button/s
 import { ThemeContext } from 'rn-themed-tailwind';
 
 export const ProgressButton = ({ ...props }) => {
-  const { type = 'primary', onPress, children, disabled = false, progress = true, width = '100%' } = props;
+  const { type = 'primary', onPress, children, disabled = false, progress = true, width = null } = props;
 
   const { getColor, getStyle } = useContext(ThemeContext);
+
+  /* To give 100% width; without sending width in string  */
+  let widthStyle = { width: null, stretch: false };
+  if (width) {
+    widthStyle.width = width
+  } else {
+    widthStyle.width = width;
+    widthStyle.stretch = true
+  }
 
   // Default Props
   const commonStyleProps = {
     ...getStyle('rounded-lg'),
     progress: progress,
     raiseLevel: 0,
-    width: width
+    ...widthStyle,
   };
 
   const primaryEnabled = {
