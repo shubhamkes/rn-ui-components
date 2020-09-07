@@ -51,21 +51,46 @@ export const ProgressButton = ({ ...props }) => {
     borderColor: getColor('primaryColor-500')
   };
 
+  const acceptEnabled = {
+    backgroundColor: getColor('positiveColor'),
+    backgroundActive: getColor('positiveColor'),
+    textColor: getColor('whiteColor')
+  }
+
+  const rejectEnabled = {
+    backgroundColor: getColor('whiteColor'),
+    backgroundActive: getColor('whiteColor'),
+    textColor: getColor('negativeColor'),
+    boderWidth: 2,
+    borderColor: getColor('negativeColor')
+  }
+
   let buttonTheme = {};
+  let btnType = '';
 
   switch (type) {
     case 'primary':
       buttonTheme = disabled ? primaryDisabled : primaryEnabled;
+      btnType = 'primary';
       break;
     case 'secondary':
       buttonTheme = disabled ? primaryDisabled : secondaryEnabled;
+      btnType = 'secondary';
+      break;
+    case 'accept':
+      buttonTheme = disabled ? primaryDisabled : acceptEnabled;
+      btnType = 'primary';
+      break;
+    case 'reject':
+      buttonTheme = disabled ? primaryDisabled : rejectEnabled;
+      btnType = 'secondary';
       break;
   }
 
   return (
     <AwesomeButtonBlue
       {...commonStyleProps}
-      type={type}
+      type={btnType}
       disabled={disabled}
       {...buttonTheme}
       onPress={next => onPress(next)}
