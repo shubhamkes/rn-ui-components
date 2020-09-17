@@ -20,15 +20,16 @@ const CustomTextInput = React.forwardRef((props, ref) => {
 
   return (
     <TextField
-      {...props}
       ref={ref}
       labelOffset={labelOffset}
       disabledLineWidth={2}
-      labelFontSize={14}
+      labelFontSize={10}
+      fontSize={14}
       lineWidth={1}
       tintColor={getColor('text-onSecondaryColor')}
       lineType={'solid'}
       disabledLineType={'solid'}
+      {...props}
     />
   );
 });
