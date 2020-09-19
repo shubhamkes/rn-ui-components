@@ -11,7 +11,7 @@ import { ThemeContext, GetStyle } from "rn-themed-tailwind";
 
 import { Text } from "../index";
 
-const Fonts = Platform.android ? {
+const Fonts = Platform.OS === 'android' ? {
     ProximaNovaSemibold: 'ProximaNovaSemibold',
     ProximaNovaBold: 'ProximaNovaBold',
     ProximaNovaRegular: 'ProximaNovaRegular',
