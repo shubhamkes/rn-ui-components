@@ -40,10 +40,12 @@ const TEXT_STYLE = StyleSheet.create({
 
 /**
  *font-size
-sm=10
-base=12
-lg==14
-xl=16
+sm=12
+base=14
+lg==16
+xl=18
+xxl=22
+xxxl=24
 
 * font-weight
 regular/normal==400
@@ -103,6 +105,22 @@ const TextXlSb = ({ children, ...props }: GetStyleProps) => {
     return <TextWrapper textStyle="xl-sb" defaultColor="text-onSurfaceColor-200" {...props} >{children} </TextWrapper>
 };
 
+const TextXXlB = ({ children, ...props }: GetStyleProps) => {
+    return <TextWrapper textStyle="xxl-b" defaultColor="text-onSurfaceColor-200" {...props} >{children} </TextWrapper>
+};
+
+const TextXXlSb = ({ children, ...props }: GetStyleProps) => {
+    return <TextWrapper textStyle="xxl-sb" defaultColor="text-onSurfaceColor-200" {...props} >{children} </TextWrapper>
+};
+
+const TextXXXlB = ({ children, ...props }: GetStyleProps) => {
+    return <TextWrapper textStyle="xxxl-b" defaultColor="text-onSurfaceColor-200" {...props} >{children} </TextWrapper>
+};
+
+const TextXXXlSb = ({ children, ...props }: GetStyleProps) => {
+    return <TextWrapper textStyle="xxxl-sb" defaultColor="text-onSurfaceColor-200" {...props} >{children} </TextWrapper>
+};
+
 interface TextWrapperStyle extends GetStyleProps {
     textStyle: string
 };
@@ -136,6 +154,10 @@ export {
     TextLgSb,
     TextLgB,
     TextXlB,
+    TextXXlB,
+    TextXXXlB,
     TextXlSb,
+    TextXXlSb,
+    TextXXXlSb,
     TEXT_STYLE,
 };
