@@ -10,7 +10,7 @@ type ScrollProp = {
 }
 
 /**
- * @class CustomScrollView 
+ * @class CustomScrollView
  * @extends {React.Component}
  * @param {object} contentContainerStyleObject - for android usage
  * @param {object} contentInsetStyleObject - for ios usage
@@ -18,13 +18,14 @@ type ScrollProp = {
  * assigned to it and converts them into relative size according to the screen size of the device
  */
 
-const CustomScrollView = React.forwardRef((props: ScrollProp, ref) => {
-    const { theme, style, contentContainerStyle } = props;
+const CustomScrollView = React.forwardRef(({ theme, style, keyboardShouldPersistTaps = 'handled', contentContainerStyle, ...props }: ScrollProp, ref) => {
+    // const { theme, style, contentContainerStyle } = props;
 
     return (
         <ScrollView
             ref={ref}
             {...props}
+            keyboardShouldPersistTaps={keyboardShouldPersistTaps}
             style={style}
             contentContainerStyle={contentContainerStyle}
         >
