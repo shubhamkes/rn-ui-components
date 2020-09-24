@@ -3,9 +3,9 @@
 * Description: Used to render a Custom Button on the screen
 * https://callstack.github.io/react-native-paper/button.html
 *
-* 
-*   <Button 
-        icon="camera" 
+*
+*   <Button
+        icon="camera"
         mode="contained" // text | outlined | contained
         onPress={() => console.log('Pressed')}
     >
@@ -18,15 +18,15 @@ import * as React from 'react';
 import { Button } from 'react-native-paper';
 
 const CustomButton = (props) => {
-    let mode = 'contained';
-    if (props.mode) {
-        mode = props.mode;
-    }
+    const { style = {}, mode = 'contained', uppercase = false, ...prop } = props;
 
+    const buttonStyle = { elevation: 0, ...style };
     return (
         <Button
-            {...props}
+            uppercase={uppercase}
+            style={buttonStyle}
             mode={mode}
+            {...prop}
         >
             {props.children}
         </Button>

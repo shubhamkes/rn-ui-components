@@ -22,6 +22,7 @@ const Fonts = Platform.OS === 'android' ? {
     }
 
 const TEXT_STYLE = StyleSheet.create({
+    "sm-rg": { ...GetStyle("text-sm font-normal"), fontFamily: Fonts.ProximaNovaRegular },
     "sm-sb": { ...GetStyle("text-sm font-semibold"), fontFamily: Fonts.ProximaNovaSemibold },
     "sm-b": { ...GetStyle("text-sm font-bold"), fontFamily: Fonts.ProximaNovaBold },
     "b-sb": { ...GetStyle("text-base font-semibold"), fontFamily: Fonts.ProximaNovaSemibold },
@@ -70,6 +71,10 @@ const TextSmB = ({ children, ...props }: GetStyleProps) => {
 
 const TextSmSb = ({ children, ...props }: GetStyleProps) => {
     return <TextWrapper textStyle="sm-sb" defaultColor="text-onSurfaceColor-100" {...props} >{children} </TextWrapper>
+};
+
+const TextSmRg = ({ children, ...props }: GetStyleProps) => {
+    return <TextWrapper textStyle="sm-rg" defaultColor="text-onSurfaceColor-200" {...props} >{children} </TextWrapper>
 };
 
 const TextBSb = ({ children, ...props }: GetStyleProps) => {
@@ -147,6 +152,7 @@ const TextWrapper = ({ textStyle, style, color, defaultColor, children, textVar,
 export {
     TextSmB,
     TextSmSb,
+    TextSmRg,
     TextBSb,
     TextBB,
     TextBRg,
