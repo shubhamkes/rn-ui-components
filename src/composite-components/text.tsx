@@ -25,16 +25,22 @@ const TEXT_STYLE = StyleSheet.create({
     "sm-rg": { ...GetStyle("text-sm font-normal"), fontFamily: Fonts.ProximaNovaRegular },
     "sm-sb": { ...GetStyle("text-sm font-semibold"), fontFamily: Fonts.ProximaNovaSemibold },
     "sm-b": { ...GetStyle("text-sm font-bold"), fontFamily: Fonts.ProximaNovaBold },
+
+    "b-rg": { ...GetStyle("text-base font-normal"), fontFamily: Fonts.ProximaNovaRegular },
     "b-sb": { ...GetStyle("text-base font-semibold"), fontFamily: Fonts.ProximaNovaSemibold },
     "b-b": { ...GetStyle("text-base font-bold"), fontFamily: Fonts.ProximaNovaBold },
-    "b-rg": { ...GetStyle("text-base font-normal"), fontFamily: Fonts.ProximaNovaRegular },
+
     "lg-rg": { ...GetStyle("text-lg font-normal "), fontFamily: Fonts.ProximaNovaRegular },
     "lg-sb": { ...GetStyle("text-lg font-semibold"), fontFamily: Fonts.ProximaNovaSemibold },
     "lg-b": { ...GetStyle("text-lg font-bold"), fontFamily: Fonts.ProximaNovaBold },
+
+    "xl-rg": { ...GetStyle("text-xl font-normal "), fontFamily: Fonts.ProximaNovaRegular },
     "xl-sb": { ...GetStyle("text-xl font-semibold "), fontFamily: Fonts.ProximaNovaSemibold },
     "xl-b": { ...GetStyle("text-xl font-bold "), fontFamily: Fonts.ProximaNovaBold },
+
     "xxl-b": { ...GetStyle("text-xxl font-bold "), fontFamily: Fonts.ProximaNovaBold },
     "xxl-sb": { ...GetStyle("text-xxl font-semibold "), fontFamily: Fonts.ProximaNovaBold },
+
     "xxxl-b": { ...GetStyle("text-xxl font-bold "), fontFamily: Fonts.ProximaNovaBold },
     "xxxl-sb": { ...GetStyle("text-xxxl font-semibold "), fontFamily: Fonts.ProximaNovaBold },
 });
@@ -110,6 +116,10 @@ const TextXlSb = ({ children, ...props }: GetStyleProps) => {
     return <TextWrapper textStyle="xl-sb" defaultColor="text-onSurfaceColor-200" {...props} >{children} </TextWrapper>
 };
 
+const TextXlRg = ({ children, ...props }: GetStyleProps) => {
+    return <TextWrapper textStyle="xl-rg" defaultColor="text-onSurfaceColor-200" {...props} >{children} </TextWrapper>
+};
+
 const TextXXlB = ({ children, ...props }: GetStyleProps) => {
     return <TextWrapper textStyle="xxl-b" defaultColor="text-onSurfaceColor-200" {...props} >{children} </TextWrapper>
 };
@@ -159,10 +169,11 @@ export {
     TextLgRg,
     TextLgSb,
     TextLgB,
+    TextXlRg,
+    TextXlSb,
     TextXlB,
     TextXXlB,
     TextXXXlB,
-    TextXlSb,
     TextXXlSb,
     TextXXXlSb,
     TEXT_STYLE,

@@ -24,7 +24,7 @@
         "@umangmaurya/react-native-really-awesome-button": "^1.0.0",
         "color": "^3.1.2",
         "prop-types": "^15.7.2",
-        "react-locale-language": "^1.0.3",
+        "react-locale-language": "^1.0.7",
         "rn-themed-tailwind": "../rn-themed-tailwind"
     },
     "devDependencies": {
