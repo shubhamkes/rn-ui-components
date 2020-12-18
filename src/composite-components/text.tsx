@@ -72,68 +72,68 @@ interface GetStyleProps {
 };
 
 const TextSmB = ({ children, ...props }: GetStyleProps) => {
-    return <TextWrapper textStyle="sm-b" defaultColor="text-onSurfaceColor-100" {...props} >{children} </TextWrapper>
+    return <TextWrapper textStyle="sm-b" defaultColor="text-onSurfaceColor-100" {...props} >{children}</TextWrapper>
 };
 
 const TextSmSb = ({ children, ...props }: GetStyleProps) => {
-    return <TextWrapper textStyle="sm-sb" defaultColor="text-onSurfaceColor-100" {...props} >{children} </TextWrapper>
+    return <TextWrapper textStyle="sm-sb" defaultColor="text-onSurfaceColor-100" {...props} >{children}</TextWrapper>
 };
 
 const TextSmRg = ({ children, ...props }: GetStyleProps) => {
-    return <TextWrapper textStyle="sm-rg" defaultColor="text-onSurfaceColor-200" {...props} >{children} </TextWrapper>
+    return <TextWrapper textStyle="sm-rg" defaultColor="text-onSurfaceColor-200" {...props} >{children}</TextWrapper>
 };
 
 const TextBSb = ({ children, ...props }: GetStyleProps) => {
-    return <TextWrapper textStyle="b-sb" defaultColor="text-onSurfaceColor-200" {...props} >{children} </TextWrapper>
+    return <TextWrapper textStyle="b-sb" defaultColor="text-onSurfaceColor-200" {...props} >{children}</TextWrapper>
 };
 
 const TextBB = ({ children, ...props }: GetStyleProps) => {
-    return <TextWrapper textStyle="b-b" defaultColor="text-onSurfaceColor-200" {...props} >{children} </TextWrapper>
+    return <TextWrapper textStyle="b-b" defaultColor="text-onSurfaceColor-200" {...props} >{children}</TextWrapper>
 };
 
 const TextBRg = ({ children, ...props }: GetStyleProps) => {
-    return <TextWrapper textStyle="b-rg" defaultColor="text-onSurfaceColor-200" {...props} >{children} </TextWrapper>
+    return <TextWrapper textStyle="b-rg" defaultColor="text-onSurfaceColor-200" {...props} >{children}</TextWrapper>
 };
 
 const TextLgRg = ({ children, ...props }: GetStyleProps) => {
-    return <TextWrapper textStyle="lg-rg" defaultColor="text-onSurfaceColor-200" {...props} >{children} </TextWrapper>
+    return <TextWrapper textStyle="lg-rg" defaultColor="text-onSurfaceColor-200" {...props} >{children}</TextWrapper>
 };
 
 const TextLgSb = ({ children, ...props }: GetStyleProps) => {
-    return <TextWrapper textStyle="lg-sb" defaultColor="text-onSurfaceColor-200" {...props} >{children} </TextWrapper>
+    return <TextWrapper textStyle="lg-sb" defaultColor="text-onSurfaceColor-200" {...props} >{children}</TextWrapper>
 
 };
 
 const TextLgB = ({ children, ...props }: GetStyleProps) => {
-    return <TextWrapper textStyle="lg-b" defaultColor="text-onSurfaceColor-200" {...props} >{children} </TextWrapper>
+    return <TextWrapper textStyle="lg-b" defaultColor="text-onSurfaceColor-200" {...props} >{children}</TextWrapper>
 };
 
 const TextXlB = ({ children, ...props }: GetStyleProps) => {
-    return <TextWrapper textStyle="xl-b" defaultColor="text-onSurfaceColor-200" {...props} >{children} </TextWrapper>
+    return <TextWrapper textStyle="xl-b" defaultColor="text-onSurfaceColor-200" {...props} >{children}</TextWrapper>
 };
 
 const TextXlSb = ({ children, ...props }: GetStyleProps) => {
-    return <TextWrapper textStyle="xl-sb" defaultColor="text-onSurfaceColor-200" {...props} >{children} </TextWrapper>
+    return <TextWrapper textStyle="xl-sb" defaultColor="text-onSurfaceColor-200" {...props} >{children}</TextWrapper>
 };
 
 const TextXlRg = ({ children, ...props }: GetStyleProps) => {
-    return <TextWrapper textStyle="xl-rg" defaultColor="text-onSurfaceColor-200" {...props} >{children} </TextWrapper>
+    return <TextWrapper textStyle="xl-rg" defaultColor="text-onSurfaceColor-200" {...props} >{children}</TextWrapper>
 };
 
 const TextXXlB = ({ children, ...props }: GetStyleProps) => {
-    return <TextWrapper textStyle="xxl-b" defaultColor="text-onSurfaceColor-200" {...props} >{children} </TextWrapper>
+    return <TextWrapper textStyle="xxl-b" defaultColor="text-onSurfaceColor-200" {...props} >{children}</TextWrapper>
 };
 
 const TextXXlSb = ({ children, ...props }: GetStyleProps) => {
-    return <TextWrapper textStyle="xxl-sb" defaultColor="text-onSurfaceColor-200" {...props} >{children} </TextWrapper>
+    return <TextWrapper textStyle="xxl-sb" defaultColor="text-onSurfaceColor-200" {...props} >{children}</TextWrapper>
 };
 
 const TextXXXlB = ({ children, ...props }: GetStyleProps) => {
-    return <TextWrapper textStyle="xxxl-b" defaultColor="text-onSurfaceColor-200" {...props} >{children} </TextWrapper>
+    return <TextWrapper textStyle="xxxl-b" defaultColor="text-onSurfaceColor-200" {...props} >{children}</TextWrapper>
 };
 
 const TextXXXlSb = ({ children, ...props }: GetStyleProps) => {
-    return <TextWrapper textStyle="xxxl-sb" defaultColor="text-onSurfaceColor-200" {...props} >{children} </TextWrapper>
+    return <TextWrapper textStyle="xxxl-sb" defaultColor="text-onSurfaceColor-200" {...props} >{children}</TextWrapper>
 };
 
 interface TextWrapperStyle extends GetStyleProps {
