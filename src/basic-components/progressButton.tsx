@@ -46,6 +46,8 @@ export const ProgressButton = ({ ...props }) => {
     const secondaryEnabled = {
         backgroundColor: getColor('whiteColor'),
         backgroundActive: getColor('whiteColor'),
+        backgroundProgress: '#FBF4F4',
+        backgroundDarker: '#FBF4F4',
         textColor: getColor('primaryColor-500'),
         boderWidth: 2,
         borderColor: getColor('primaryColor-500')
@@ -54,21 +56,37 @@ export const ProgressButton = ({ ...props }) => {
     const acceptEnabled = {
         backgroundColor: getColor('positiveColor'),
         backgroundActive: getColor('positiveColor'),
+        backgroundProgress: '#0B7458',
+        backgroundDarker: '#0B7458',
         textColor: getColor('whiteColor')
     }
 
     const rejectEnabled = {
         backgroundColor: getColor('whiteColor'),
         backgroundActive: getColor('whiteColor'),
+        backgroundProgress: '#FBF4F4',
+        backgroundDarker: '#FBF4F4',
         textColor: getColor('negativeColor'),
         boderWidth: 2,
-        borderColor: getColor('negativeColor')
+        borderColor: getColor('negativeColor'),
     }
 
     const readyEnabled = {
         backgroundColor: getColor('warnColor'),
         backgroundActive: getColor('warnColor'),
+        backgroundProgress: '#C17010',
+        backgroundDarker: '#C17010',
         textColor: getColor('whiteColor')
+    }
+
+    const outlineBlueEnabled = {
+        backgroundColor: getColor('whiteColor'),
+        backgroundActive: getColor('whiteColor'),
+        backgroundProgress: '#FBF4F4',
+        backgroundDarker: '#FBF4F4',
+        textColor: getColor('primaryColor-500'),
+        boderWidth: 2,
+        borderColor: getColor('primaryColor-500'),
     }
 
     let buttonTheme = {};
@@ -99,6 +117,15 @@ export const ProgressButton = ({ ...props }) => {
             buttonTheme = disabled ? primaryDisabled : primaryEnabled;
             btnType = 'primary';
             break;
+        case 'outline_blue':
+            buttonTheme = disabled ? primaryDisabled : outlineBlueEnabled;
+            btnType = 'secondary';
+            break;
+        default:
+            buttonTheme = disabled ? primaryDisabled : primaryEnabled;
+            btnType = 'primary';
+            break;
+
     }
 
     return (
