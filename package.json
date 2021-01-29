@@ -1,6 +1,6 @@
 {
     "name": "rn-ui-components",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "unit level components such as card, buttons, checkbox, radiobutton in material design",
     "main": "dist/index.js",
     "module": "dist/index.d.ts",
